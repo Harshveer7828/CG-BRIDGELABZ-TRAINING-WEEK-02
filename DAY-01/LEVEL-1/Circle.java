@@ -1,14 +1,14 @@
-// Program to Compute Area of a Circle Problem Statement:Write a program to create a Circle
-// class with an attribute radius.Add methods to calculate and display the area and circumference of the circle.
 
 public class Circle {
     // Create the usefull attributes
     int radius;
 
+    //Constructor to intialize the values
     Circle(int radius){
         this.radius = radius;
     }
 
+    //Method to display the area of circle
     void display(){
         System.out.println("Area of Circle of radius is "+this.radius + " is "+ Math.PI * Math.pow(radius,2 ));
     }
