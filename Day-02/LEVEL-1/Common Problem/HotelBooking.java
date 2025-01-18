@@ -1,4 +1,5 @@
 public class HotelBooking {
+    // attributes
     private String guestName;
     private String roomType;
     private int nights;
@@ -48,4 +49,20 @@ public class HotelBooking {
     public void setNights(int nights) {
         this.nights = nights;
     }
+
+    // Method to display
+    public void display() {
+        System.out.println("Guest Name: " + guestName);
+        System.out.println("Room Type: " + roomType);
+        System.out.println("Nights Stay: " + nights);
+    }
+    
 }
+
+class Hotel{
+    public static void main(String[] args) {
+        HotelBooking hotel1  = new HotelBooking("Om tiwari","delux",1);
+        hotel1.display();
+    } 
+}
+
