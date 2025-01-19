@@ -1,35 +1,35 @@
-public class HotelBooking {
-    // attributes
+public class HotelBooking{
+
+    //define attributes
     private String guestName;
     private String roomType;
     private int nights;
 
-    // Default constructor
-    public HotelBooking() {
-        this.guestName = "";
-        this.roomType = "";
-        this.nights = 0;
+    //default constructor
+    public HotelBooking(){
+        guestName = "John";
+        roomType = "Delux";
+        nights = 3;
     }
 
-    // Parameterized constructor
-    public HotelBooking(String guestName, String roomType, int nights) {
+    //parameterized constructor
+    public HotelBooking(String guestName, String roomType, int nights){
         this.guestName = guestName;
         this.roomType = roomType;
         this.nights = nights;
     }
 
-    // Copy constructor
-    public HotelBooking(HotelBooking booking) {
+    //copy constructor
+    public HotelBooking(HotelBooking booking){
         this.guestName = booking.guestName;
         this.roomType = booking.roomType;
         this.nights = booking.nights;
     }
 
-    // Getters and setters
+    //using getters and setters
     public String getGuestName() {
         return guestName;
     }
-
     public void setGuestName(String guestName) {
         this.guestName = guestName;
     }
@@ -50,19 +50,30 @@ public class HotelBooking {
         this.nights = nights;
     }
 
-    // Method to display
+
+
+    //method to display details
     public void display() {
         System.out.println("Guest Name: " + guestName);
         System.out.println("Room Type: " + roomType);
-        System.out.println("Nights Stay: " + nights);
+        System.out.println("Number of Nights: " + nights);
     }
-    
 }
 
-class Hotel{
+
+class Hotel {
     public static void main(String[] args) {
-        HotelBooking hotel1  = new HotelBooking("Om tiwari","delux",1);
-        hotel1.display();
-    } 
-}
+        HotelBooking booking1 = new HotelBooking();
+        HotelBooking booking2 = new HotelBooking("Harshveer", "Premium", 1);
+        HotelBooking booking3 = new HotelBooking(booking2);
 
+        //calling default constructor
+        booking1.display();
+
+        //calling parameterized constructor
+        booking2.display();
+
+        //calling copy constructor
+        booking3.display();
+    }
+}

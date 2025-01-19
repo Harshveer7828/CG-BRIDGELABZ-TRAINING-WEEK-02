@@ -33,11 +33,14 @@ public class Person {
 
     // Display method to display the name and age of the person
     public void display() {
-        System.out.println("Name: " + name + " Age: " + age);
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
     }
 
     public static void main(String[] args) {
         Person om = new Person("OM", 23);
+        Person copyConstructor = new Person(om);
         om.display();
+        copyConstructor.display();
     }
 }

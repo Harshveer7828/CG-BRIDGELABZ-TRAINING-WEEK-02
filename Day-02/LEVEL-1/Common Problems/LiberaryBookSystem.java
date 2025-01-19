@@ -1,20 +1,14 @@
-public class LiberaryBookSystem {
-    public static void main(String[] args) {
-        Book book1 = new Book("harsh", "balveer", 255);
-        book1.borrowBook();
-    }
-}
 class Book{
     private String title;
     private String author;
     private double price;
     private boolean isAvailable;
 
-    public Book(String title, String author, double price) {
+    public Book(String title, String author, double price, boolean isAvailable) {
         this.title = title;
         this.author = author;
         this.price = price;
-        this.isAvailable = true;
+        this.isAvailable = isAvailable;
     }
 
     public String getTitle() {
@@ -33,7 +27,7 @@ class Book{
         return isAvailable;
     }
     public void setIsAvailable(boolean isAvailable) {
-       this.isAvailable = isAvailable;
+        this.isAvailable = isAvailable;
     }
 
     public void borrowBook() {
@@ -44,10 +38,12 @@ class Book{
             System.out.println("Book is not available.");
         }
     }
-
-    public void returnBook() {
-        isAvailable = true;
-        System.out.println("Book returned successfully.");
-    }
-    
 }
+
+public class LiberaryBookSystem {
+    public static void main(String[] args) {
+        Book book1 = new Book("Death : An Inside Story", "Sadhguru", 255, true);
+        book1.borrowBook();
+    }
+}
+
