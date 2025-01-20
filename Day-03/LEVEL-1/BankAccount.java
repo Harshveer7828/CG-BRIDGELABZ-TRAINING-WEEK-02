@@ -26,9 +26,11 @@ public class BankAccount {
         if(account1 instanceof BankAccount) {
             account1.displayDetails();
         }
+        else System.out.println("Not a instance account 1");
         if(account2 instanceof BankAccount) {
             account2.displayDetails();
-        }
+        }else System.out.println("Not a instance account 2");
+
         getTotalAccounts();
     }
 }
