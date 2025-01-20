@@ -1,10 +1,10 @@
 class Product {
     //define attributes
-    static int discount;
-    String productName;
-    double price;
-    int quantity;
-    final String productId;
+    private static int discount;
+    private String productName;
+    private double price;
+    private int quantity;
+    private final String productId;
 
     //create constructor
     Product(String productName, double price, int quantity, String productId){
@@ -27,6 +27,7 @@ class Product {
         System.out.println("Product Price: " + price);
         System.out.println("Product Quantity: " + quantity);
         System.out.println("Product ID: " + productId);
+        System.out.println("Product Discount: " + discount);
     }
 }
 

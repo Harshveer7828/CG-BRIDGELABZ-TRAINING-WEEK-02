@@ -2,7 +2,7 @@ public class UniversityStudentManagement {
     public static void main(String[] args) {
         Student student1 = new Student("Harsh veer",21,'A');
         Student student2 = new Student("Om",40,'F');
-
+        // Checks the instance of Student class
         if (student1 instanceof Student) {
             student1.displayStudentDetails();
         }

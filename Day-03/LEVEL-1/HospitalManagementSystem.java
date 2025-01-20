@@ -3,6 +3,7 @@ public class HospitalManagementSystem{
         Patient patient1 = new Patient("Om Tiwari", 21, "STOMACH ALLERGY", 69);
         if (patient1 instanceof Patient) {
             patient1.displayPatientDetails();
+            Patient.getTotalPatients();
         }
     }
 }
@@ -14,12 +15,14 @@ class Patient {
     private int age;
     private String ailment;
     private final int patientId;
+
     // Constructor to intitialize the attributes
     Patient(String name, int age, String ailment, int patientId){
         this.name = name;
         this.age = age;
         this.ailment = ailment;
         this.patientId = patientId;
+        countPatient++;
     }
     
     // Method to display the details of the patient
@@ -31,5 +34,6 @@ class Patient {
     // Method to display the total patients in the hospital
     static void getTotalPatients(){
         System.out.println("Toatal Patients are:- "+ countPatient);
+
     }
 }

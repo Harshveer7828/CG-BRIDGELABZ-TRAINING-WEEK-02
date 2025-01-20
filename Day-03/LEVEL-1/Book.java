@@ -1,10 +1,10 @@
 public class Book {
     
     //define attributes 
-    static String libraryName = "This is Library name";
-    String title;
-    String author;
-    final String isbn;
+    private static String libraryName = "This is Library name";
+    private String title;
+    private String author;
+    private final String isbn;
 
     //create constructor
     Book(String title, String author, String isbn){
