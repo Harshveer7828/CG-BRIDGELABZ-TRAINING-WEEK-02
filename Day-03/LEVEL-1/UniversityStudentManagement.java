@@ -25,6 +25,8 @@ class Student{
         this.name = name;
         this.rollNumber = rollNumber;
         this.grade = grade;
+        countStudent++;
+        
     }
 
     // Mehtod to count the total students
