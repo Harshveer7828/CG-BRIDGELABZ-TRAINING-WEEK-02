@@ -23,6 +23,7 @@ class Employee {
     void displayEmployeeDetails() {
         System.out.println("Employee Name: " + name);
         System.out.println("Employee ID: " + id);
+        System.out.println("Employee Designation: " + designation);
     }
     
 }
