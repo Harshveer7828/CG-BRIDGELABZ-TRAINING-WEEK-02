@@ -1,37 +1,24 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class LiberaryManagement{
     public static void main(String[] args) {
-        Liberary lib1 = new Liberary("LIB1");
         Book omni = new Book("Omni", "TATA");
-        lib1.addBook(omni);
         System.out.println(omni.toString());
     }
 }
 
 class Liberary{
-    private List<Book> Books;
-    private String name;
+    private ArrayList<Book> Books;
 
     // Constructor to initialize the attributes
-    Liberary(String name){
-        this.name = name;
-        this.Books = new ArrayList<>();
+    Liberary(String name, Book book){
+        this.Books.add(book);
     }
 
     //Method to add new book
     void addBook(Book book){
         Books.add(book);
     }
-
-    //Getter to get the private values
-    public String getName(){
-        return name;
-    }
-
-    
-    
 
 }
 
@@ -54,7 +41,8 @@ class Book{
         return author;
     }
 
-    public String toString() {
-        return "Book [Title: " + title + ", Author: " + author + "]";
+    public String toString(){
+        return "Book [Title - " + title + ", author - "+ author + " ]";
     }
+    
 }
